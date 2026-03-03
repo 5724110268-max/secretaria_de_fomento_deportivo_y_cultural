@@ -1,0 +1,237 @@
+/* ============================= */
+/* FUENTE INSTITUCIONAL */
+/* ============================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --rojo: #b30000;
+    --verde: #1f5e3b;
+    --gris: #4a4a4a;
+    --gris-claro: #f4f4f4;
+    --blanco: #ffffff;
+}
+
+/* ============================= */
+/* BASE */
+/* ============================= */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--blanco);
+    color: var(--gris);
+    line-height: 1.8;
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+header {
+    background-color: var(--blanco);
+    border-bottom: 4px solid var(--rojo);
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 70px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--gris);
+    margin-left: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--rojo);
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.hero {
+    padding: 120px 60px;
+    background-color: var(--gris-claro);
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: var(--rojo);
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 900px;
+    text-align: justify;
+}
+
+/* ============================= */
+/* SECCIONES */
+/* ============================= */
+
+.section {
+    padding: 90px 60px;
+}
+
+.section h2 {
+    font-size: 34px;
+    color: var(--verde);
+    margin-bottom: 25px;
+}
+
+.section p {
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* ============================= */
+/* BOTONES */
+/* ============================= */
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 28px;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #8a0000;
+}
+
+.tema-btn {
+    background-color: var(--verde);
+    color: var(--blanco);
+    border: none;
+    padding: 8px 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+.tema-btn:hover {
+    background-color: #15422a;
+}
+
+/* ============================= */
+/* GALERÍA */
+/* ============================= */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.04);
+}
+
+/* ============================= */
+/* CONTACTO */
+/* ============================= */
+
+.contacto-info {
+    font-size: 19px;
+}
+
+.contacto-info p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    margin-top: 60px;
+}
+
+/* ============================= */
+/* MODO OSCURO */
+/* ============================= */
+
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #e5e5e5;
+}
+
+.dark-mode header {
+    background-color: #111;
+    border-bottom: 4px solid var(--verde);
+}
+
+.dark-mode .hero {
+    background-color: #222;
+}
+
+.dark-mode .section h2 {
+    color: var(--rojo);
+}
+
+.dark-mode footer {
+    background-color: #111;
+}
+/* ============================= */
+/* GALERÍA PROGRAMAS UNIFORME */
+/* ============================= */
+
+.galeria {
+    display: flex;
+    gap: 20px;              /* Espacio entre imágenes */
+    margin-bottom: 40px;
+}
+
+.galeria img {
+    width: 100%;
+    max-width: 350px;       /* Todas del mismo ancho */
+    height: 250px;          /* Todas del mismo alto */
+    object-fit: cover;      /* Recorta sin deformar */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
